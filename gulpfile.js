@@ -18,7 +18,7 @@ gulp.task('serve', ['scss'], function() {
 gulp.task('scss', function() {
     return gulp.src("assets/scss/*.scss")
         .pipe(scss({ outputStyle: 'expanded' }).on('error', scss.logError))
-        .pipe(gulp.dest("assets/css"))
+        .pipe(gulp.dest("./assets/css"))
         .pipe(reload({ stream: true }));
 });
 
