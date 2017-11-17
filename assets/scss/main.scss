@@ -174,6 +174,9 @@ a {
         padding-left: 8px;
         border: 1px solid #e0e0e0;
         outline: none;
+        &.active {
+            border: 1px solid #ff6700;
+        }
     }
     .search-content {
         position: absolute;
@@ -236,6 +239,10 @@ a {
         color: #fff;
         background-color: #ff6700;
     }
+}
+
+.header {
+    position: relative;
 }
 
 .hide {
@@ -464,12 +471,14 @@ a {
         background-color: #625d58;
         li {
             float: left;
-            width: 70px;
+            width: 75px;
             height: 70px;
             border: 1px solid #665e57;
-            line-height: 42px;
+            line-height: 30px;
+            margin-top: 13px;
             display: inline-block;
             a {
+
                 font-size: 15px;
                 &:hover {
                     color: white;
@@ -477,6 +486,7 @@ a {
                 i {
                     font-size: 25px;
                     padding-left: 20px;
+                    padding-top: 20px;
                 }
             }
         }
@@ -654,29 +664,31 @@ a {
             box-shadow: 0 7px 15px 7px #ddd;
         }
     }
-    .jd-left .l1 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-bottom: 15px;
-        &:hover {
-            top: -3px;
-            box-shadow: 0 7px 15px 7px #ddd;
+    .jd-left {
+        .l1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-bottom: 15px;
+            &:hover {
+                top: -3px;
+                box-shadow: 0 7px 15px 7px #ddd;
+            }
         }
-    }
-    .jd-left .l2 {
-        position: absolute;
-        top: 315px;
-        left: 0;
-        margin-bottom: 15px;
-        &:hover {
-            top: 313px;
-            box-shadow: 0 7px 15px 7px #ddd;
+        .l2 {
+            position: absolute;
+            top: 315px;
+            left: 0;
+            margin-bottom: 15px;
+            &:hover {
+                top: 313px;
+                box-shadow: 0 7px 15px 7px #ddd;
+            }
         }
-    }
-    .jd-left div img {
-        width: 235px;
-        height: 300px;
+        div img {
+            width: 235px;
+            height: 300px;
+        }
     }
     ul {
         display: none;
@@ -698,184 +710,183 @@ a {
             overflow: hidden;
             background-color: white;
         }
-    }
-    div.red {
-        @include color;
-        background-color: #e53935;
-    }
-    div.green {
-        @include color;
-        background-color: #83c44e;
-    }
-    div.orange {
-        @include color;
-        background-color: #ff6700;
-    }
-    .bottom {
-        position: absolute;
-        top: 300px;
-        width: 235px;
-        height: 80px;
-        background-color: #ff6700;
-        transition: top 500ms ease;
-        a {
-            display: block;
-            width: 190px;
-            height: 40px;
-            margin-top: 5px;
-            margin-left: 30px;
-            &:last-child {
+        div.red {
+            @include color;
+            background-color: #e53935;
+        }
+        div.green {
+            @include color;
+            background-color: #83c44e;
+        }
+        div.orange {
+            @include color;
+            background-color: #ff6700;
+        }
+        .bottom {
+            position: absolute;
+            top: 300px;
+            width: 235px;
+            height: 80px;
+            background-color: #ff6700;
+            transition: top 500ms ease;
+            a {
+                display: block;
+                width: 190px;
+                height: 40px;
+                margin-top: 5px;
+                margin-left: 30px;
+                &:last-child {
+                    margin-top: 0;
+                }
+            }
+            p {
+                width: 174px;
+                height: 36px;
+                font-size: 12px;
+                line-height: 18px;
+                text-align: left;
                 margin-top: 0;
+                margin-bottom: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
-        p {
-            width: 174px;
-            height: 36px;
-            font-size: 12px;
-            line-height: 18px;
-            text-align: left;
-            margin-top: 0;
-            margin-bottom: 0;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
-    img {
-        width: 150px;
-        height: 150px;
-        margin-top: 58px;
-    }
-    a {
-        display: block;
-        text-align: center;
-        font-size: 14px;
-        color: black;
-    }
-    p {
-        font-size: 12px;
-        width: 235px;
-        height: 15px;
-        color: #b0b0b0;
-        margin-top: 5px;
-    }
-    span {
-        display: block;
-        width: 235px;
-        height: 10px;
-        font-size: 14px;
-        color: orange;
-        text-align: center;
-    }
-    li:hover {
-        top: -3px;
-        box-shadow: 0 7px 15px 7px #ddd;
-        &.bottom {
-            top: 220px;
-        }
-    }
-    .end1 {
-        width: 233px;
-        height: 142px;
-        margin-bottom: 15px;
-        margin-top: 5px;
         img {
-            position: absolute;
-            top: 30px;
-            left: 116px;
-            width: 80px;
-            height: 80px;
-            margin-top: 0;
+            width: 150px;
+            height: 150px;
+            margin-top: 58px;
         }
         a {
-            position: absolute;
-            top: 42px;
-            left: 30px;
-            width: 94px;
-            height: 21px;
-            text-align: left;
-            overflow: hidden;
-            white-space: nowrap;
-            overflow: ellipsis;
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            color: black;
+        }
+        p {
+            font-size: 12px;
+            width: 235px;
+            height: 15px;
+            color: #b0b0b0;
+            margin-top: 5px;
         }
         span {
-            position: absolute;
-            top: 70px;
-            left: 30px;
-            width: 94px;
-            height: 21px;
-            text-align: left;
+            display: block;
+            width: 235px;
+            height: 10px;
+            font-size: 14px;
+            color: orange;
+            text-align: center;
         }
-    }
-    .end2 {
-        width: 233px;
-        height: 142px;
-        a {
-            position: absolute;
-            top: 52px;
-            left: 30px;
-            width: 94px;
-            height: 45px;
-            text-align: left;
-            overflow: hidden;
-            white-space: nowrap;
-            overflow: ellipsis;
+        li:hover {
+            top: -3px;
+            box-shadow: 0 7px 15px 7px #ddd;
+            &:hover .bottom {
+                top: 220px;
+            }
         }
-        i {
-            position: absolute;
-            top: 40px;
-            left: 126px;
-            font-size: 50px;
-            color: #ff6700;
+        .end1 {
+            width: 233px;
+            height: 142px;
+            margin-bottom: 15px;
+            margin-top: 5px;
+            img {
+                position: absolute;
+                top: 30px;
+                left: 116px;
+                width: 80px;
+                height: 80px;
+                margin-top: 0;
+            }
+            a {
+                position: absolute;
+                top: 42px;
+                left: 30px;
+                width: 94px;
+                height: 21px;
+                text-align: left;
+                overflow: hidden;
+                white-space: nowrap;
+                overflow: ellipsis;
+            }
+            span {
+                position: absolute;
+                top: 70px;
+                left: 30px;
+                width: 94px;
+                height: 21px;
+                text-align: left;
+            }
         }
-    }
-}
-
-.audio li {
-    list-style: none;
-    position: relative;
-    top: 0;
-    float: left;
-    width: 295px;
-    height: 290px;
-    margin-right: 11px;
-    margin-bottom: 15px;
-    background-color: #fff;
-    margin-left: 0;
-    img {
-        width: 295px;
-        height: 180px;
-    }
-    &:hover {
-        top: -3px;
-        box-shadow: 0 7px 15px 7px #ddd;
-    }
-    &:last-child {
-        margin-right: 0px;
-    }
-    .audio-1 {
-        width: 293px;
-        height: 180px;
-        margin-bottom: 30px;
-    }
-    a {
-        display: inline-block;
-        width: 295px;
-        height: 15px;
-        color: black;
-        font-size: 14px;
-        text-align: center;
-    }
-    p {
-        width: 295px;
-        height: 15px;
-        font-size: 12px;
-        color: #b0b7cb;
-        text-align: center;
-        margin-top: 13px;
+        .end2 {
+            width: 233px;
+            height: 142px;
+            a {
+                position: absolute;
+                top: 52px;
+                left: 30px;
+                width: 94px;
+                height: 45px;
+                text-align: left;
+                overflow: hidden;
+                white-space: nowrap;
+                overflow: ellipsis;
+            }
+            i {
+                position: absolute;
+                top: 40px;
+                left: 126px;
+                font-size: 50px;
+                color: #ff6700;
+            }
+        }
     }
 }
 
 .audio {
+    li {
+        list-style: none;
+        position: relative;
+        top: 0;
+        float: left;
+        width: 295px;
+        height: 290px;
+        margin-right: 11px;
+        margin-bottom: 15px;
+        background-color: #fff;
+        margin-left: 0;
+        img {
+            width: 295px;
+            height: 180px;
+        }
+        &:hover {
+            top: -3px;
+            box-shadow: 0 7px 15px 7px #ddd;
+        }
+        .audio-1 {
+            width: 293px;
+            height: 180px;
+            margin-bottom: 30px;
+        }
+        a {
+            display: inline-block;
+            width: 295px;
+            height: 15px;
+            color: black;
+            font-size: 14px;
+            text-align: center;
+        }
+        p {
+            width: 295px;
+            height: 15px;
+            font-size: 12px;
+            color: #b0b7cb;
+            text-align: center;
+            margin-top: 13px;
+        }
+    }
+    ul li:last-child {
+        margin-right: 0px;
+    }
     a:hover {
         color: #ff6700;
     }

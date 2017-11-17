@@ -173,6 +173,10 @@ a {
   outline: none;
 }
 
+.topbar-list input.active {
+  border: 1px solid #ff6700;
+}
+
 .topbar-list .search-content {
   position: absolute;
   top: 78px;
@@ -241,6 +245,10 @@ a {
 .topbar-list .sousuo i:hover {
   color: #fff;
   background-color: #ff6700;
+}
+
+.header {
+  position: relative;
 }
 
 .hide {
@@ -509,10 +517,11 @@ a {
 
 .carousel-down .down-left li {
   float: left;
-  width: 70px;
+  width: 75px;
   height: 70px;
   border: 1px solid #665e57;
-  line-height: 42px;
+  line-height: 30px;
+  margin-top: 13px;
   display: inline-block;
 }
 
@@ -527,6 +536,7 @@ a {
 .carousel-down .down-left li a i {
   font-size: 25px;
   padding-left: 20px;
+  padding-top: 20px;
 }
 
 .carousel-down img {
@@ -779,7 +789,7 @@ a {
   background-color: white;
 }
 
-.jd-img div.red {
+.jd-img ul div.red {
   position: absolute;
   left: 85px;
   top: 0;
@@ -791,7 +801,7 @@ a {
   background-color: #e53935;
 }
 
-.jd-img div.green {
+.jd-img ul div.green {
   position: absolute;
   left: 85px;
   top: 0;
@@ -803,7 +813,7 @@ a {
   background-color: #83c44e;
 }
 
-.jd-img div.orange {
+.jd-img ul div.orange {
   position: absolute;
   left: 85px;
   top: 0;
@@ -815,7 +825,7 @@ a {
   background-color: #ff6700;
 }
 
-.jd-img .bottom {
+.jd-img ul .bottom {
   position: absolute;
   top: 300px;
   width: 235px;
@@ -824,7 +834,7 @@ a {
   transition: top 500ms ease;
 }
 
-.jd-img .bottom a {
+.jd-img ul .bottom a {
   display: block;
   width: 190px;
   height: 40px;
@@ -832,11 +842,11 @@ a {
   margin-left: 30px;
 }
 
-.jd-img .bottom a:last-child {
+.jd-img ul .bottom a:last-child {
   margin-top: 0;
 }
 
-.jd-img .bottom p {
+.jd-img ul .bottom p {
   width: 174px;
   height: 36px;
   font-size: 12px;
@@ -848,20 +858,20 @@ a {
   text-overflow: ellipsis;
 }
 
-.jd-img img {
+.jd-img ul img {
   width: 150px;
   height: 150px;
   margin-top: 58px;
 }
 
-.jd-img a {
+.jd-img ul a {
   display: block;
   text-align: center;
   font-size: 14px;
   color: black;
 }
 
-.jd-img p {
+.jd-img ul p {
   font-size: 12px;
   width: 235px;
   height: 15px;
@@ -869,7 +879,7 @@ a {
   margin-top: 5px;
 }
 
-.jd-img span {
+.jd-img ul span {
   display: block;
   width: 235px;
   height: 10px;
@@ -878,23 +888,23 @@ a {
   text-align: center;
 }
 
-.jd-img li:hover {
+.jd-img ul li:hover {
   top: -3px;
   box-shadow: 0 7px 15px 7px #ddd;
 }
 
-.jd-img li:hover.bottom {
+.jd-img ul li:hover:hover .bottom {
   top: 220px;
 }
 
-.jd-img .end1 {
+.jd-img ul .end1 {
   width: 233px;
   height: 142px;
   margin-bottom: 15px;
   margin-top: 5px;
 }
 
-.jd-img .end1 img {
+.jd-img ul .end1 img {
   position: absolute;
   top: 30px;
   left: 116px;
@@ -903,7 +913,7 @@ a {
   margin-top: 0;
 }
 
-.jd-img .end1 a {
+.jd-img ul .end1 a {
   position: absolute;
   top: 42px;
   left: 30px;
@@ -915,7 +925,7 @@ a {
   overflow: ellipsis;
 }
 
-.jd-img .end1 span {
+.jd-img ul .end1 span {
   position: absolute;
   top: 70px;
   left: 30px;
@@ -924,12 +934,12 @@ a {
   text-align: left;
 }
 
-.jd-img .end2 {
+.jd-img ul .end2 {
   width: 233px;
   height: 142px;
 }
 
-.jd-img .end2 a {
+.jd-img ul .end2 a {
   position: absolute;
   top: 52px;
   left: 30px;
@@ -941,7 +951,7 @@ a {
   overflow: ellipsis;
 }
 
-.jd-img .end2 i {
+.jd-img ul .end2 i {
   position: absolute;
   top: 40px;
   left: 126px;
@@ -972,10 +982,6 @@ a {
   box-shadow: 0 7px 15px 7px #ddd;
 }
 
-.audio li:last-child {
-  margin-right: 0px;
-}
-
 .audio li .audio-1 {
   width: 293px;
   height: 180px;
@@ -998,6 +1004,10 @@ a {
   color: #b0b7cb;
   text-align: center;
   margin-top: 13px;
+}
+
+.audio ul li:last-child {
+  margin-right: 0px;
 }
 
 .audio a:hover {
